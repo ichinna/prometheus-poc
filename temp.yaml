@@ -1,0 +1,85 @@
+apiVersion: monitoring.coreos.com/v1
+kind: Prometheus
+metadata:
+  annotations:
+    kubectl.kubernetes.io/last-applied-configuration: |
+      {"apiVersion":"monitoring.coreos.com/v1","kind":"Prometheus","metadata":{"annotations":{},"labels":{"app.kubernetes.io/component":"prometheus","app.kubernetes.io/instance":"k8s","app.kubernetes.io/name":"prometheus","app.kubernetes.io/part-of":"kube-prometheus","app.kubernetes.io/version":"2.48.1"},"name":"k8s","namespace":"monitoring"},"spec":{"alerting":{"alertmanagers":[{"apiVersion":"v2","name":"alertmanager-main","namespace":"monitoring","port":"web"}]},"enableFeatures":[],"externalLabels":{},"image":"quay.io/prometheus/prometheus:v2.48.1","nodeSelector":{"kubernetes.io/os":"linux"},"podMetadata":{"labels":{"app.kubernetes.io/component":"prometheus","app.kubernetes.io/instance":"k8s","app.kubernetes.io/name":"prometheus","app.kubernetes.io/part-of":"kube-prometheus","app.kubernetes.io/version":"2.48.1"}},"podMonitorNamespaceSelector":{},"podMonitorSelector":{},"probeNamespaceSelector":{},"probeSelector":{},"replicas":2,"resources":{"requests":{"memory":"400Mi"}},"ruleNamespaceSelector":{},"ruleSelector":{},"scrapeConfigNamespaceSelector":{},"scrapeConfigSelector":{},"securityContext":{"fsGroup":2000,"runAsNonRoot":true,"runAsUser":1000},"serviceAccountName":"prometheus-k8s","serviceMonitorNamespaceSelector":{},"serviceMonitorSelector":{},"version":"2.48.1"}}
+  creationTimestamp: "2024-01-16T15:33:11Z"
+  generation: 1
+  labels:
+    app.kubernetes.io/component: prometheus
+    app.kubernetes.io/instance: k8s
+    app.kubernetes.io/name: prometheus
+    app.kubernetes.io/part-of: kube-prometheus
+    app.kubernetes.io/version: 2.48.1
+  name: k8s
+  namespace: monitoring
+  resourceVersion: "1107"
+  uid: fde4fce6-778f-42d1-a1e7-843adb2a5900
+spec:
+  alerting:
+    alertmanagers:
+    - apiVersion: v2
+      name: alertmanager-main
+      namespace: monitoring
+      port: web
+  enableFeatures: []
+  evaluationInterval: 30s
+  externalLabels: {}
+  image: quay.io/prometheus/prometheus:v2.48.1
+  nodeSelector:
+    kubernetes.io/os: linux
+  podMetadata:
+    labels:
+      app.kubernetes.io/component: prometheus
+      app.kubernetes.io/instance: k8s
+      app.kubernetes.io/name: prometheus
+      app.kubernetes.io/part-of: kube-prometheus
+      app.kubernetes.io/version: 2.48.1
+  podMonitorNamespaceSelector: {}
+  podMonitorSelector: {}
+  portName: web
+  probeNamespaceSelector: {}
+  probeSelector: {}
+  replicas: 2
+  resources:
+    requests:
+      memory: 400Mi
+  ruleNamespaceSelector: {}
+  ruleSelector: {}
+  scrapeConfigNamespaceSelector: {}
+  scrapeConfigSelector: {}
+  scrapeInterval: 30s
+  securityContext:
+    fsGroup: 2000
+    runAsNonRoot: true
+    runAsUser: 1000
+  serviceAccountName: prometheus-k8s
+  serviceMonitorNamespaceSelector: {}
+  serviceMonitorSelector: {}
+  version: 2.48.1
+status:
+  availableReplicas: 2
+  conditions:
+  - lastTransitionTime: "2024-01-16T15:34:29Z"
+    message: ""
+    observedGeneration: 1
+    reason: ""
+    status: "True"
+    type: Available
+  - lastTransitionTime: "2024-01-16T15:34:29Z"
+    message: ""
+    observedGeneration: 1
+    reason: ""
+    status: "True"
+    type: Reconciled
+  paused: false
+  replicas: 2
+  shardStatuses:
+  - availableReplicas: 2
+    replicas: 2
+    shardID: "0"
+    unavailableReplicas: 0
+    updatedReplicas: 2
+  unavailableReplicas: 0
+  updatedReplicas: 2
